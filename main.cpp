@@ -1,9 +1,20 @@
 ﻿#include <iostream>
 #include <vector>
+#include <string>
 
 #include "expenses.h"
 #include "finance.h"
 #include "data.h"
+
+
+std::string Request_Date()
+{
+    std::string date_expenses;
+    std::cout << "Input date your expenses." << std::endl;
+    std::getline(std::cin, date_expenses);
+    return date_expenses;
+}
+
 
 int main()
 {
@@ -15,16 +26,17 @@ int main()
     card::DebitCard new_debit_card("debitcard1", 10000, 1252777, ListofCards);
     card::CreditCard new_credit_card("creditcard1", 20000, "20.04.2027", ListofCards);
 
-    expenses::Expenses a1(2000, "foodcost", "08.05.2024", "Food");
+    //Place for your decision
+    //...
+
+
     expenses::Expenses a2(5000, "bills", "07.05.2024", "House");
-    expenses::Expenses a3(2500, "dogfood", "08.05.2024", "Food");
     expenses::Expenses a4(7500, "tax", "13.06.2024", "Work");
     expenses::Expenses a5(6000, "scholarship", "13.06.2024", "School");
     expenses::Expenses a6(5500, "newfence", "13.06.2024", "House");
 
-    ListofExpenses.push_back(a1);
+    
     ListofExpenses.push_back(a2);
-    ListofExpenses.push_back(a3);
     ListofExpenses.push_back(a4);
     ListofExpenses.push_back(a5);
     ListofExpenses.push_back(a6);
